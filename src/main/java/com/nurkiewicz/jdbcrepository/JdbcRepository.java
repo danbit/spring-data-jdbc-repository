@@ -104,6 +104,10 @@ public abstract class JdbcRepository<T extends Persistable<ID>, ID extends Seria
 		this.jdbcOperations = new JdbcTemplate(dataSource);
 	}
 
+	protected JdbcOperations getJdbcOperations(){
+		return this.jdbcOperations;
+	}
+
 	protected TableDescription getTable() {
 		return table;
 	}
